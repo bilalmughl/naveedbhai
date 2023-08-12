@@ -83,3 +83,62 @@ function loadCurrentImage() {
 
 // Start the loop
 loadCurrentImage();
+
+$(document).ready(function() {
+    const $body = $('body');
+    const $sidrWrapper = $('.sidr-wrapper');
+
+    // Function to open the sidr menu
+    function openSidr() {
+        $sidrWrapper.addClass('active');
+        $body.addClass('sidr-open'); // Add a class to disable body scroll
+    }
+
+    // Function to close the sidr menu
+    function closeSidr() {
+        $sidrWrapper.removeClass('active');
+        $body.removeClass('sidr-open'); // Remove the class to enable body scroll
+    }
+
+    // Toggle sidr menu on burger icon click
+    $('.iqoniq-bargur').click(function() {
+        if ($sidrWrapper.hasClass('active')) {
+            closeSidr();
+        } else {
+            openSidr();
+        }
+    });
+
+    // Close sidr menu on close button click
+    $('.sidr-close-button').click(function() {
+        closeSidr();
+    });
+
+    // Close sidr menu when clicking outside of it
+    $(document).on('mouseup touchstart', function(event) {
+        if (!$sidrWrapper.is(event.target) && $sidrWrapper.has(event.target).length === 0 && $sidrWrapper.hasClass('active')) {
+            closeSidr();
+        }
+    });
+
+
+    $('.iqoniq-about-slide').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3000, // Adjust the autoplay speed (in milliseconds)
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            // Add more responsive settings as needed
+        ]
+    });
+});

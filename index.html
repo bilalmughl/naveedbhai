@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
   </head>
   <body>
     <header>
@@ -25,7 +28,15 @@
                 </ul>
             </div>
         </div>
-        
+        <div class="sidr-wrapper">
+            <button class="sidr-close-button">×</button>
+            <ul class="sidr-navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
         <section class="main-banner">
             <div class="main-banner-container">
                 <div class="main-banner-content">
@@ -35,14 +46,42 @@
             </div>
         </section>
 
-        <section class="iqoniq-section">
-            <div class="iqoniq-about-section">
-                <figure class="iqoniq-about-thumbnail">
-                    <img src="img/about.png" alt="about">
-                </figure>
-                <div class="iqoniq-about-caption">
-                    <h2>IDS 25–29 March 2025</h2>
-                    <p>Sit amet facilisis magna etiam. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Est sit amet facilisis magna etiam. Facilisis gravida neque convallis a cras semper. Duis tristique sollicitudin nibh sit amet. Vestibulum morbi blandit cursus risus at ultrices mi.</p>
+        <section class="iqoniq-about-section-outer">
+            <div class="slider-container">
+                <div class="iqoniq-about-slide slick">
+                    <div class="item">
+                        <div class="iqoniq-about-section">
+                            <figure class="iqoniq-about-thumbnail">
+                                <img src="img/about.png" alt="about">
+                            </figure>
+                            <div class="iqoniq-about-caption">
+                                <h2>IDS 25–29 March 2025</h2>
+                                <p>Sit amet facilisis magna etiam. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Est sit amet facilisis magna etiam. Facilisis gravida neque convallis a cras semper. Duis tristique sollicitudin nibh sit amet. Vestibulum morbi blandit cursus risus at ultrices mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="iqoniq-about-section">
+                            <figure class="iqoniq-about-thumbnail">
+                                <img src="img/about.png" alt="about">
+                            </figure>
+                            <div class="iqoniq-about-caption">
+                                <h2>IDS 25–29 March 2025</h2>
+                                <p>Sit amet facilisis magna etiam. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Est sit amet facilisis magna etiam. Facilisis gravida neque convallis a cras semper. Duis tristique sollicitudin nibh sit amet. Vestibulum morbi blandit cursus risus at ultrices mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="iqoniq-about-section">
+                            <figure class="iqoniq-about-thumbnail">
+                                <img src="img/about.png" alt="about">
+                            </figure>
+                            <div class="iqoniq-about-caption">
+                                <h2>IDS 25–29 March 2025</h2>
+                                <p>Sit amet facilisis magna etiam. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Est sit amet facilisis magna etiam. Facilisis gravida neque convallis a cras semper. Duis tristique sollicitudin nibh sit amet. Vestibulum morbi blandit cursus risus at ultrices mi.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -176,7 +215,10 @@
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/645791fc11.js" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/index.js"></script>
   </body>
 </html>
